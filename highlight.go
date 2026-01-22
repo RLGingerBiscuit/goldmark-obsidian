@@ -30,22 +30,22 @@ func (p *highlightDelimiterProcessor) OnMatch(consumes int) gast.Node {
 	return ast.NewHighlight()
 }
 
+// HighlightParser is an Obsidian highlight parser.
 type HighlightParser struct {
 }
 
-// NewHighlightParser return a new InlineParser that parses
-// highlight expressions.
-func NewHighlightParser() parser.InlineParser {
-	return &HighlightParser{}
+// NewHighlightParser return a new HighlightParser.
+func NewHighlightParser() HighlightParser {
+	return HighlightParser{}
 }
 
 // Trigger implements [parser.InlineParser].
-func (s *HighlightParser) Trigger() []byte {
+func (HighlightParser) Trigger() []byte {
 	return []byte{'='}
 }
 
 // Parse implements [parser.InlineParser].
-func (s *HighlightParser) Parse(parent gast.Node, block text.Reader, pc parser.Context) gast.Node {
+func (HighlightParser) Parse(parent gast.Node, block text.Reader, pc parser.Context) gast.Node {
 	before := block.PrecendingCharacter()
 	line, segment := block.PeekLine()
 	node := parser.ScanDelimiter(line, before, 1, newHighlightDelimiterProcessor())
@@ -65,7 +65,7 @@ type HighlightHTMLRenderer struct {
 }
 
 // NewHighlightHTMLRenderer returns a new HighlightHTMLRenderer.
-func NewHighlightHTMLRenderer(opts ...html.Option) renderer.NodeRenderer {
+func NewHighlightHTMLRenderer(opts ...html.Option) *HighlightHTMLRenderer {
 	r := &HighlightHTMLRenderer{
 		Config: html.NewConfig(),
 	}
@@ -75,7 +75,7 @@ func NewHighlightHTMLRenderer(opts ...html.Option) renderer.NodeRenderer {
 	return r
 }
 
-// RegisterFuncs implements renderer.NodeRenderer.RegisterFuncs.
+// RegisterFuncs implements [renderer.NodeRenderer].
 func (r *HighlightHTMLRenderer) RegisterFuncs(reg renderer.NodeRendererFuncRegisterer) {
 	reg.Register(ast.KindHighlight, r.renderHighlight)
 }
@@ -100,8 +100,8 @@ func (r *HighlightHTMLRenderer) renderHighlight(
 }
 
 // Highlight is an extension that helps setup Obsidian [highlight] parser and HTML renderer.
-// //
-// // [highlight]: https://help.obsidian.md/syntax#Bold,%20italics,%20highlights
+//
+// [highlight]: https://help.obsidian.md/syntax#Bold,%20italics,%20highlights
 type Highlight struct {
 }
 
