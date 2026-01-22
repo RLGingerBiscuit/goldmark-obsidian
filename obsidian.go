@@ -111,6 +111,7 @@ func (e Obsidian) WithMathJaxOptions(opts ...mathjax.Option) Obsidian {
 func (e Obsidian) Extend(m goldmark.Markdown) {
 	e.meta.Extend(m)
 	NewBlockID().Extend(m)
+	NewHighlight().Extend(m)
 	e.hashtag.Extend(m)
 	e.wikilink.Extend(m)
 	e.mermaid.Extend(m)

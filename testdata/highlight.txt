@@ -1,0 +1,30 @@
+100: Expected highlight
+//- - - - - - - - -//
+==Hi== Hello, world!
+//- - - - - - - - -//
+<p><mark>Hi</mark> Hello, world!</p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+101: Highlight cannot span multiple lines
+//- - - - - - - - -//
+This ==has a
+
+new paragraph==.
+//- - - - - - - - -//
+<p>This ==has a</p>
+<p>new paragraph==.</p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+103: Single-equals highlight
+//- - - - - - - - -//
+=Hi= Hello, world!
+//- - - - - - - - -//
+<p><mark>Hi</mark> Hello, world!</p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+104: Three or more equals do not create a highlight
+//- - - - - - - - -//
+This will ===not=== strike.
+//- - - - - - - - -//
+<p>This will ===not=== strike.</p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//

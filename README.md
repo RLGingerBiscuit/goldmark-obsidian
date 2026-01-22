@@ -26,7 +26,7 @@ An [Obsidian](https://obsidian.md/) extension for the
 - [x] Defining a block: `^id`
 - [ ] Comments (block, inline): `%%Text%%`
 - [x] Strikethroughs (GFM): `~~Text~~`
-- [ ] Highlights: `==Text==`
+- [x] Highlights: `==Text==`
 - [x] Code blocks: ` ``` `
 - [x] Incomplete task (GFM): `- [ ]`
 - [x] Completed task (GFM): `- [x]`
@@ -49,7 +49,6 @@ TODO:
 
 - Add basic tests for all syntax used in [Obsidian Help](https://help.obsidian.md/Home).
 - Add support for comments (both block and inline).
-- Add support for highlights.
 - Add support for callouts.
 
 Not planned (PR is welcome):
