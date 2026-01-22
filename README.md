@@ -24,7 +24,7 @@ An [Obsidian](https://obsidian.md/) extension for the
 - [x] Embed files: `![[Link]]`
 - [x] Block references: `![[Link#^id]]`
 - [x] Defining a block: `^id`
-- [ ] Comments (block, inline): `%%Text%%`
+- [x] Comments (block, inline): `%%Text%%`
 - [x] Strikethroughs (GFM): `~~Text~~`
 - [x] Highlights: `==Text==`
 - [x] Code blocks: ` ``` `
@@ -48,7 +48,6 @@ Known inconsistencies with Obsidian:
 TODO:
 
 - Add basic tests for all syntax used in [Obsidian Help](https://help.obsidian.md/Home).
-- Add support for comments (both block and inline).
 - Add support for callouts.
 
 Not planned (PR is welcome):

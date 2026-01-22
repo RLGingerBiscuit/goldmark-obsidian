@@ -1,0 +1,29 @@
+100
+//- - - - - - - - -//
+%%
+This is a comment block.
+%%
+//- - - - - - - - -//
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+101: Comment block between paragraphs
+//- - - - - - - - -//
+First paragraph.
+%%
+This is another comment block.
+It spans multiple lines.
+%%
+Second paragraph.
+//- - - - - - - - -//
+<p>First paragraph.</p>
+<p>Second paragraph.</p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+102: Comment block with trailing text
+//- - - - - - - - -//
+%%
+This is a comment block.
+%% With trailing text.
+//- - - - - - - - -//
+<p>With trailing text.</p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//

@@ -11,9 +11,12 @@ import (
 
 func main() {
 	source := []byte(`
+%%
+- [?] Happy _Future_ Year 📅 2027-01-01
+%%
 - [ ] Happy ==New== Year 📅 2026-01-01 ^first-task
-- [x] Happy ~~Old~~ Year 📅 2025-01-01
-	`)
+- [x] Happy ~~Old~~ %% previously New %% Year 📅 2025-01-01
+`)
 
 	md := goldmark.New(
 		goldmark.WithExtensions(
@@ -28,6 +31,6 @@ func main() {
 	// Output:
 	// <ul class="contains-task-list">
 	// <li data-task="" class="task-list-item" id="^first-task"><input disabled="" type="checkbox" class="task-list-item-checkbox"> Happy <mark>New</mark> Year 📅 2026-01-01</li>
-	// <li data-task="x" class="task-list-item is-checked"><input checked="" disabled="" type="checkbox" class="task-list-item-checkbox"> Happy <del>Old</del> Year 📅 2025-01-01</li>
+	// <li data-task="x" class="task-list-item is-checked"><input checked="" disabled="" type="checkbox" class="task-list-item-checkbox"> Happy <del>Old</del>  Year 📅 2025-01-01</li>
 	// </ul>
 }

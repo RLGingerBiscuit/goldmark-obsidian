@@ -1,0 +1,62 @@
+100: Comment in a paragraph
+//- - - - - - - - -//
+The %% quick %% brown fox jumps over the %% lazy %% dog.
+//- - - - - - - - -//
+<p>The  brown fox jumps over the  dog.</p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+101: Comment in an ATX heading
+//- - - - - - - - -//
+## This is an %%ATX%% heading
+//- - - - - - - - -//
+<h2>This is an  heading</h2>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+102: Comment in a Setext heading
+//- - - - - - - - -//
+This is a %%Setext%% heading
+-----------------------
+//- - - - - - - - -//
+<h2>This is a  heading</h2>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+103: Comment in a link
+//- - - - - - - - -//
+[Link to %%example%% site](https://example.com)
+//- - - - - - - - -//
+<p><a href="https://example.com">Link to  site</a></p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+104: Comment in an image (TODO This should show verbatim)
+//- - - - - - - - -//
+![An %%example%% image](https://example.com/image.png)
+//- - - - - - - - -//
+<p><img src="https://example.com/image.png" alt="An  image"></p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+105: Comment in a code span
+//- - - - - - - - -//
+This is a `code %%span%% example`.
+//- - - - - - - - -//
+<p>This is a <code>code %%span%% example</code>.</p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+106: Comment in a blockquote
+//- - - - - - - - -//
+> This is a blockquote with a %%comment%%.
+//- - - - - - - - -//
+<blockquote>
+<p>This is a blockquote with a .</p>
+</blockquote>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+107: Comment in a list item
+//- - - - - - - - -//
+- This is a list item with a %%comment%%.
+- Another item.
+//- - - - - - - - -//
+<ul>
+<li>This is a list item with a .</li>
+<li>Another item.</li>
+</ul>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
