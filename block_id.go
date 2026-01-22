@@ -88,7 +88,7 @@ func (BlockIDParser) Parse(parent gast.Node, block text.Reader, pc parser.Contex
 	return ast.NewBlockID(id)
 }
 
-// BlockIDHTMLRenderer is an HTML renderer for Obsidian block id.
+// BlockIDHTMLRenderer is a HTML renderer for an Obsidian block id.
 //
 // Current implementation does not render block id at all (like Obsidian's "Reading" mode).
 type BlockIDHTMLRenderer struct{}

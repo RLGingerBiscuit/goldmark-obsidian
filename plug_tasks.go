@@ -503,7 +503,7 @@ func (PlugTasksPropParser) Parse(parent gast.Node, block text.Reader, _ parser.C
 	return node
 }
 
-// PlugTasksHTMLRenderer is an HTML renderer for Obsidian plugin Tasks's tasks.
+// PlugTasksHTMLRenderer is a HTML renderer for Obsidian plugin Tasks's tasks.
 //
 // It renders task status checkbox and task properties in format similar to produced by saving
 // Obsidian plugin Tasks's modal window with task details (add missing spaces, drop invalid
